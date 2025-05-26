@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/btnLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Линейное уравнение"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnSquare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Квадратное уравнение"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnNok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="НОК"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnNod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="НОД"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnSystem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Система уравнений"
+        android:layout_marginBottom="12dp" />
+
+</LinearLayout>
