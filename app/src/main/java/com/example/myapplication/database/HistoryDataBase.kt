@@ -1,4 +1,4 @@
-package com.example.myapplication.logic
+package com.example.myapplication.database
 
 import android.content.Context
 import androidx.room.Database

@@ -3,42 +3,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     android:padding="24dp"
-    android:gravity="center">
+    android:background="@android:color/white">
 
-    <Button
-        android:id="@+id/btnLine"
+    <EditText
+        android:id="@+id/loginEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Линейное уравнение"
+        android:hint="Логин"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Войти"
         android:layout_marginBottom="12dp" />
 
     <Button
-        android:id="@+id/btnSquare"
+        android:id="@+id/registerButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Квадратное уравнение"
-        android:layout_marginBottom="12dp" />
-
-    <Button
-        android:id="@+id/btnNok"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="НОК"
-        android:layout_marginBottom="12dp" />
-
-    <Button
-        android:id="@+id/btnNod"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="НОД"
-        android:layout_marginBottom="12dp" />
-
-    <Button
-        android:id="@+id/btnSystem"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Система уравнений"
-        android:layout_marginBottom="12dp" />
+        android:text="Зарегистрироваться" />
 
 </LinearLayout>

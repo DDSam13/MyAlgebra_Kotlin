@@ -1,6 +1,9 @@
 package com.example.myapplication.logic
 
 import android.content.Context
+import myapplication.database.HistoryDatabase
+import myapplication.database.OperationType
+import myapplication.database.HistoryItem
 
 object Methods {
     suspend fun saveOperation(
