@@ -23,3 +23,5 @@ data class HistoryItem(
     val coefficients: String,
     val result: String
 )
+
+

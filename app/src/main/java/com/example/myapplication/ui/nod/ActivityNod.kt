@@ -34,3 +34,5 @@ class ActivityNod : AppCompatActivity() {
         }
     }
 }
+
+
