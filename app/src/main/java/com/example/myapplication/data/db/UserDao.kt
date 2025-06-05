@@ -1,9 +1,10 @@
-package com.example.myapplication.database
+package com.example.myapplication.data.db
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Transaction
 
 @Dao
 interface UserDao {
@@ -15,4 +16,11 @@ interface UserDao {
 
     @Query("DELETE FROM users WHERE login = :login")
     suspend fun deleteUserByLogin(login: String)
+
+    @Transaction
+    @Query("SELECT * FROM users WHERE login = :login")
+    suspend fun getUserWithHistory(login: String): UserWithHistory?
+
+    @Query("SELECT * FROM users")
+    suspend fun getAllUsers(): List<User>
 }

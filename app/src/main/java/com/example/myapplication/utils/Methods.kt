@@ -1,9 +1,11 @@
-package com.example.myapplication.logic
+package com.example.myapplication.utils
 
 import android.content.Context
-import myapplication.database.HistoryDatabase
-import myapplication.database.OperationType
-import myapplication.database.HistoryItem
+import com.example.myapplication.data.db.AppDatabase
+import com.example.myapplication.data.db.OperationType
+import com.example.myapplication.data.db.HistoryItem
+import java.security.MessageDigest
+import com.example.myapplication.data.repository.UserRepository
 
 object Methods {
     suspend fun saveOperation(
@@ -51,4 +53,14 @@ object Methods {
             "$operationStr : ${item.result}"
         }
     }
+
+    fun hashPassword(password: String): String {
+        val bytes = MessageDigest.getInstance("SHA-256").digest(password.toByteArray())
+        return bytes.joinToString("") { "%02x".format(it) }
+    }
+}
+
+fun provideUserRepository(context: Context): UserRepository {
+    val db = AppDatabase.getDatabase(context)
+    return UserRepository(db.userDao())
 }

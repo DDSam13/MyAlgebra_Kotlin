@@ -1,4 +1,4 @@
-package com.example.myapplication.logic
+package com.example.myapplication.utils
 
 object Math {
 
